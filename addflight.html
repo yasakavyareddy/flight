@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Flight</title>
+  <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+  <h1>Add Flight</h1>
+  <!-- Add flight form -->
+  <form action="/admin/add-flight" method="POST">
+    <input type="text" name="flightNumber" placeholder="Flight Number" required>
+    <input type="text" name="departure" placeholder="Departure" required>
+    <input type="text" name="arrival" placeholder="Arrival" required>
+    <input type="date" name="date" required>
+    <input type="time" name="time" required>
+    <button type="submit">Add Flight</button>
+  </form>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Remove Flight</title>
+  <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+  <h1>Remove Flight</h1>
+  <!-- Remove flight form -->
+  <form action="/admin/remove-flight/FLIGHT_ID" method="POST">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="text" name="flightId" placeholder="Flight ID" required>
+    <button type="submit">Remove Flight</button>
+  </form>
+</body>
+</html>
+
+

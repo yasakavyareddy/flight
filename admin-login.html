@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Login</title>
+  <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Admin Login</h1>
+    <div class="form-container">
+      <form id="admin-login-form" class="form" action="/admin/dashboard" method="POST">
+        <h2>Admin Login</h2>
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("admin-login-form").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent the default form submission
+
+      // Perform form validation and login logic
+      var username = document.getElementsByName("username")[0].value;
+      var password = document.getElementsByName("password")[0].value;
+
+      // Example login validation (replace with your own logic)
+      if (username === "abcd@gmail.com" && password === "abcd") {
+        // Redirect to the next page after successful login
+        window.location.href = "addflight.html";
+      } else {
+        alert("Invalid username or password. Please try again.");
+      }
+    });
+  </script>
+</body>
+</html>

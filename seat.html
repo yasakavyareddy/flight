@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Flight Seat Selection</title>
+  <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Flight Seat Selection</h1>
+    <div class="form-container">
+      <form id="seat-selection-form" class="form" action="/confirm-seat" method="POST">
+        <h2>Select your seat</h2>
+        <select name="seat">
+          <option value="1A">1A</option>
+          <option value="1B">1B</option>
+          <option value="1C">1C</option>
+          <!-- Add more options as needed -->
+        </select>
+        <button type="submit">Confirm Seat</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("seat-selection-form").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent the default form submission
+
+      // Perform seat selection logic
+      var seat = document.getElementsByName("seat")[0].value;
+
+      // Example seat selection logic (replace with your own logic)
+      if (seat) {
+        // Redirect to the next page after seat selection
+        window.location.href = "mybookings.html";
+      } else {
+        alert("Please select a seat.");
+      }
+    });
+  </script>
+</body>
+</html>

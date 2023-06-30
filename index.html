@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome Page</title>
+  <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+  <h1>Welcome to Our Website!</h1>
+  
+  <button onclick="redirectToLogin('user')">User Login</button>
+  <button onclick="redirectToLogin('admin')">Admin Login</button>
+
+  <script>
+    function redirectToLogin(userType) {
+      if (userType === 'user') {
+        window.location.href = 'user-login.html';
+      } else if (userType === 'admin') {
+        window.location.href = 'admin-login.html';
+      }
+    }
+  </script>
+</body>
+</html>
